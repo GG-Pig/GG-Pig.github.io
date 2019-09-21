@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.layout{ width: 300px; height: 300px; transform-style: preserve-3d; perspective: 800px; margin: 200px auto;}
+			.box{ width: 300px; height: 300px; transform-style: preserve-3d; position: relative;animation: name 10s ease; animation-iteration-count: infinite;}
+			.pic{ width: 300px; height: 300px; position: absolute; opacity: 0.5; }
+			.left{background: yellow; transform: rotateY(-90deg) translateZ(150px);}
+			.right{ background: red; transform: rotateY(90deg) translateZ(150px);}
+			.top{ background: pink; transform: rotateX(90deg) translateZ(150px);}
+			.bottom{ background: greenyellow; transform: rotateX(-90deg) translateZ(150px);}
+			.before{ background: blue; transform: translateZ(150px);}
+			.after{ background: orangered; transform: translateZ(-150px);}
+			@keyframes name{
+				0%{ transform: rotateY(0deg);}
+				50%{ transform: rotateY(360deg);}
+				70%{ transform: rotateX(0deg);}
+				100%{ transform: rotateX(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<p>
+			<h1>枫哥制作</h1>
+		</p>
+		<div class="layout">
+			<div class="box">
+				<div class="before pic"></div>
+				<div class="after pic"></div>
+				<div class="left pic"></div>
+				
+				<div class="right pic"></div>
+				<div class="top pic"></div>
+				<div class="bottom pic"></div>
+			</div>
+		</div>
+	</body>
+</html>
